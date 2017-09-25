@@ -1,6 +1,6 @@
 # YBDataSourceDemo
 
-###工具的主要目的是为了解决controller页面代码耦合度高问题。
+### 工具的主要目的是为了解决controller页面代码耦合度高问题。
 
 + 解决了vc里tableView的delegate和DataSource臃肿的问题；
 + 定义基类YBTableViewController，封装tableView以及它的代理方法；
