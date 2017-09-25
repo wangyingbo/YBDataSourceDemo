@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YBTestVC.h
 //  YBDataSourceDemo
 //
 //  Created by 王迎博 on 2017/9/25.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YBTableViewController.h"
 
-@interface ViewController : YBTableViewController
-
+@interface YBTestVC : UIViewController
 
 @end
-
