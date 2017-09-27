@@ -13,6 +13,7 @@
 
 @property (nonatomic, copy) NSString *cellIdentifier;
 @property (nonatomic, copy) NSString *cellClassName;
+@property (nonatomic, copy) NSArray *cellIdentifierArray;
 
 @end
 
@@ -30,6 +31,21 @@
         self.tableData = tableData;
         self.cellIdentifier = cellIdentifier;
         self.cellForRowAtIndexPath = cellForRowAtIndexPath;
+        self.isAllowEdit = NO;
+        _totalHeight = 0;
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithTableData:(NSArray *)tableData
+           cellsForRowAtIndexPath:(UITableViewCell * (^)(NSIndexPath *indexPath, id item))cellsForRowAtIndexPath
+{
+    self = [super init];
+    
+    if (self) {
+        self.tableData = tableData;
+        self.cellsForRowAtIndexPath = cellsForRowAtIndexPath;
         self.isAllowEdit = NO;
         _totalHeight = 0;
     }
@@ -75,6 +91,17 @@
     UITableViewCell *cell;
     
     id cellItem;
+    
+    
+    if (self.cellsForRowAtIndexPath) {
+       cellItem = [self itemAtIndexPath:indexPath sectionKey:self.sectionKey rowKey:nil];
+        cell = self.cellsForRowAtIndexPath(indexPath, cellItem);
+        
+        if (self.cellsForRowShowAtIndexPath) {
+            self.cellsForRowShowAtIndexPath(cell, indexPath, cellItem);
+        }
+        return cell;
+    }
     
     @try {
         if (!self.cellForIndexPath) {

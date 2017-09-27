@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		032455F51F7B580F00FBFAFA /* YBTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 032455F41F7B580F00FBFAFA /* YBTestCell.m */; };
+		032456061F7B64A900FBFAFA /* YBCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 032456051F7B64A900FBFAFA /* YBCustomCell.m */; };
+		032456091F7B6DB300FBFAFA /* UITableViewCell+YBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 032456081F7B6DB300FBFAFA /* UITableViewCell+YBCell.m */; };
 		0367C8DA1F78E4B9006CA13B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C8D91F78E4B9006CA13B /* main.m */; };
 		0367C8DD1F78E4B9006CA13B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C8DC1F78E4B9006CA13B /* AppDelegate.m */; };
 		0367C8E01F78E4B9006CA13B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C8DF1F78E4B9006CA13B /* ViewController.m */; };
@@ -41,6 +43,10 @@
 /* Begin PBXFileReference section */
 		032455F31F7B580F00FBFAFA /* YBTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTestCell.h; sourceTree = "<group>"; };
 		032455F41F7B580F00FBFAFA /* YBTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTestCell.m; sourceTree = "<group>"; };
+		032456041F7B64A900FBFAFA /* YBCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBCustomCell.h; sourceTree = "<group>"; };
+		032456051F7B64A900FBFAFA /* YBCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBCustomCell.m; sourceTree = "<group>"; };
+		032456071F7B6DB300FBFAFA /* UITableViewCell+YBCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YBCell.h"; sourceTree = "<group>"; };
+		032456081F7B6DB300FBFAFA /* UITableViewCell+YBCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YBCell.m"; sourceTree = "<group>"; };
 		0367C8D51F78E4B9006CA13B /* YBDataSourceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YBDataSourceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0367C8D91F78E4B9006CA13B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0367C8DB1F78E4B9006CA13B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 				0367C91C1F790B02006CA13B /* YBListVC.m */,
 				032455F31F7B580F00FBFAFA /* YBTestCell.h */,
 				032455F41F7B580F00FBFAFA /* YBTestCell.m */,
+				032456041F7B64A900FBFAFA /* YBCustomCell.h */,
+				032456051F7B64A900FBFAFA /* YBCustomCell.m */,
 				0367C8D81F78E4B9006CA13B /* Supporting Files */,
 			);
 			path = YBDataSourceDemo;
@@ -162,6 +170,8 @@
 			children = (
 				0367C90C1F78E520006CA13B /* YBDataSource.h */,
 				0367C90D1F78E520006CA13B /* YBDataSource.m */,
+				032456071F7B6DB300FBFAFA /* UITableViewCell+YBCell.h */,
+				032456081F7B6DB300FBFAFA /* UITableViewCell+YBCell.m */,
 				0367C9181F78F5AB006CA13B /* YBTableViewController.h */,
 				0367C9191F78F5AB006CA13B /* YBTableViewController.m */,
 			);
@@ -311,6 +321,8 @@
 				0367C8DA1F78E4B9006CA13B /* main.m in Sources */,
 				0367C90E1F78E520006CA13B /* YBDataSource.m in Sources */,
 				032455F51F7B580F00FBFAFA /* YBTestCell.m in Sources */,
+				032456061F7B64A900FBFAFA /* YBCustomCell.m in Sources */,
+				032456091F7B6DB300FBFAFA /* UITableViewCell+YBCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

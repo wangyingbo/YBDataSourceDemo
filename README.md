@@ -46,14 +46,26 @@
 		        return tableData.count;
 		    };
 
-+ 自定义的cell（自己调用setDelegate方法）
++ 自定义的cell，可使用多个cell（自己调用setDelegate方法）
 
-		    [self configDatasourceWithCellClass:[YBTestCell class] withCellIdentifier:@"ybcell"];
-		    self.tableViewDS.cellForRowAtIndexPath = ^(id cell, NSIndexPath *indexPath, id item) {
-		        YBTestCell *myCell = (YBTestCell *)cell;
-		        myCell.selectionStyle = UITableViewCellSelectionStyleNone;
-		        [myCell.iconImageView setImage:[UIImage imageNamed:@""]];
-		        myCell.contentLB.text = @"王颖博";
+		NSArray *cellIDArr = @[@"testCellId",@"customCellId"];
+		    [self configDatasourceWithCellClasses:@[[YBTestCell class],[YBCustomCell class]] withCellIdentifiers:cellIDArr];
+		    self.tableViewDS = [[YBDataSource alloc]initWithTableData:self.dataArray cellsForRowAtIndexPath:^UITableViewCell *(NSIndexPath *indexPath, id item) {
+		        if (indexPath.section == 0) {
+		            YBTestCell *testCell = [YBTestCell cellWithTableView:self.tableView withIdentifier:cellIDArr[indexPath.section]];
+		            testCell.selectionStyle = UITableViewCellSelectionStyleNone;
+		            [testCell.iconImageView setImage:[UIImage imageNamed:@""]];
+		            testCell.contentLB.text = @"王颖博";
+		            return testCell;
+		        }else {
+		            YBCustomCell *customCell = (YBCustomCell *)[YBCustomCell cellWithTableView:self.tableView withIdentifier:cellIDArr[1]];
+		            customCell.selectionStyle = UITableViewCellSelectionStyleNone;
+		            [customCell.iconImageView setImage:[UIImage imageNamed:@""]];
+		            customCell.contentLB.text = @"易点租";
+		            return customCell;
+		        }
+		    }];
+		    self.tableViewDS.cellsForRowShowAtIndexPath = ^void (id cell, NSIndexPath *indexPath, id item) {
 		    };
 		    self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
 		        return tableData.count;
