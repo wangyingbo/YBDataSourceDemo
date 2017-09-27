@@ -13,34 +13,53 @@
 + 调用系统的UITableViewCell
 
 
-		__weak __typeof(&*self)weakSelf = self;
-		    
-		self.dataArray = @[@[@1,@2,@3],@[@1,@2]];
-		    
-	    self.tableViewDS.cellWillDisplayAtIndexPath = ^(UITableViewCell *cell, NSIndexPath *indexPath, id item) {
-	        cell.textLabel.text = @"name";
-	    };
-	    self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
-	        return tableData.count;
-	    };
-	    self.tableViewDS.didSelectRowAtIndexPath = ^(NSIndexPath *indexPath, id item) {
-	        YBListVC *listVC = [[YBListVC alloc]init];
-	        [weakSelf.navigationController pushViewController:listVC animated:YES];
-	    };
+		    self.tableViewDS.cellWillDisplayAtIndexPath = ^(UITableViewCell *cell, NSIndexPath *indexPath, id item) {
+		        cell.textLabel.text = @"name";
+		    };
+		//    self.tableViewDS.cellForRowAtIndexPath = ^(id cell, NSIndexPath *indexPath, id item) {
+		//    };
+		    self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
+		        return tableData.count;
+		    };
+		    self.tableViewDS.didSelectRowAtIndexPath = ^(NSIndexPath *indexPath, id item) {
+		        YBListVC *listVC = [[YBListVC alloc]init];
+		        [weakSelf.navigationController pushViewController:listVC animated:YES];
+		    };
 	    
 	    
 + 实现自定义的tableViewCell
 
-		[self initDatasourceWithCellClass:[YBTestCell class]];
-	    self.tableViewDS.cellWillDisplayAtIndexPath = ^(UITableViewCell *cell, NSIndexPath *indexPath, id item) {
-	        YBTestCell *myCell = (YBTestCell *)cell;
-	        myCell.selectionStyle = UITableViewCellSelectionStyleNone;
-	        [myCell.iconImageView setImage:[UIImage imageNamed:@""]];
-	        myCell.contentLB.text = @"王颖博";
-	    };
-	    self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
-	        return tableData.count;
-	    };
+		    [self initDatasourceWithCellClass:[YBTestCell class] withCellIdentifier:@"cellId"];
+		    //    self.tableViewDS.cellWillDisplayAtIndexPath = ^(UITableViewCell *cell, NSIndexPath *indexPath, id item) {
+		    //        YBTestCell *myCell = (YBTestCell *)cell;
+		    //        myCell.selectionStyle = UITableViewCellSelectionStyleNone;
+		    //        [myCell.iconImageView setImage:[UIImage imageNamed:@""]];
+		    //        myCell.contentLB.text = @"王颖博";
+		    //    };
+		    self.tableViewDS.cellForRowAtIndexPath = ^(id cell, NSIndexPath *indexPath, id item) {
+		        YBTestCell *myCell = (YBTestCell *)cell;
+		        myCell.selectionStyle = UITableViewCellSelectionStyleNone;
+		        [myCell.iconImageView setImage:[UIImage imageNamed:@""]];
+		        myCell.contentLB.text = @"王颖博";
+		    };
+		    self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
+		        return tableData.count;
+		    };
+
++ 自定义的cell（自己调用setDelegate方法）
+
+		    [self configDatasourceWithCellClass:[YBTestCell class] withCellIdentifier:@"ybcell"];
+		    self.tableViewDS.cellForRowAtIndexPath = ^(id cell, NSIndexPath *indexPath, id item) {
+		        YBTestCell *myCell = (YBTestCell *)cell;
+		        myCell.selectionStyle = UITableViewCellSelectionStyleNone;
+		        [myCell.iconImageView setImage:[UIImage imageNamed:@""]];
+		        myCell.contentLB.text = @"王颖博";
+		    };
+		    self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
+		        return tableData.count;
+		    };
+		    [self configDatasource];
+
 	    
 + 通过重写父类方法`- (void)initDatasource`调用
 
