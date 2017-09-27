@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032455F51F7B580F00FBFAFA /* YBTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 032455F41F7B580F00FBFAFA /* YBTestCell.m */; };
 		0367C8DA1F78E4B9006CA13B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C8D91F78E4B9006CA13B /* main.m */; };
 		0367C8DD1F78E4B9006CA13B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C8DC1F78E4B9006CA13B /* AppDelegate.m */; };
 		0367C8E01F78E4B9006CA13B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C8DF1F78E4B9006CA13B /* ViewController.m */; };
@@ -16,8 +17,6 @@
 		0367C8F31F78E4B9006CA13B /* YBDataSourceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C8F21F78E4B9006CA13B /* YBDataSourceDemoTests.m */; };
 		0367C8FE1F78E4B9006CA13B /* YBDataSourceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C8FD1F78E4B9006CA13B /* YBDataSourceDemoUITests.m */; };
 		0367C90E1F78E520006CA13B /* YBDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C90D1F78E520006CA13B /* YBDataSource.m */; };
-		0367C9111F78E5C8006CA13B /* YBTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C9101F78E5C8006CA13B /* YBTestCell.m */; };
-		0367C9141F78ED20006CA13B /* YBTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C9131F78ED20006CA13B /* YBTestVC.m */; };
 		0367C91A1F78F5AB006CA13B /* YBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C9191F78F5AB006CA13B /* YBTableViewController.m */; };
 		0367C91D1F790B02006CA13B /* YBListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0367C91C1F790B02006CA13B /* YBListVC.m */; };
 /* End PBXBuildFile section */
@@ -40,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032455F31F7B580F00FBFAFA /* YBTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTestCell.h; sourceTree = "<group>"; };
+		032455F41F7B580F00FBFAFA /* YBTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTestCell.m; sourceTree = "<group>"; };
 		0367C8D51F78E4B9006CA13B /* YBDataSourceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YBDataSourceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0367C8D91F78E4B9006CA13B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0367C8DB1F78E4B9006CA13B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,10 +59,6 @@
 		0367C8FF1F78E4B9006CA13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0367C90C1F78E520006CA13B /* YBDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBDataSource.h; sourceTree = "<group>"; };
 		0367C90D1F78E520006CA13B /* YBDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBDataSource.m; sourceTree = "<group>"; };
-		0367C90F1F78E5C8006CA13B /* YBTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTestCell.h; sourceTree = "<group>"; };
-		0367C9101F78E5C8006CA13B /* YBTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTestCell.m; sourceTree = "<group>"; };
-		0367C9121F78ED20006CA13B /* YBTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTestVC.h; sourceTree = "<group>"; };
-		0367C9131F78ED20006CA13B /* YBTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTestVC.m; sourceTree = "<group>"; };
 		0367C9181F78F5AB006CA13B /* YBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTableViewController.h; sourceTree = "<group>"; };
 		0367C9191F78F5AB006CA13B /* YBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTableViewController.m; sourceTree = "<group>"; };
 		0367C91B1F790B02006CA13B /* YBListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBListVC.h; sourceTree = "<group>"; };
@@ -123,10 +120,8 @@
 				0367C8DF1F78E4B9006CA13B /* ViewController.m */,
 				0367C91B1F790B02006CA13B /* YBListVC.h */,
 				0367C91C1F790B02006CA13B /* YBListVC.m */,
-				0367C9121F78ED20006CA13B /* YBTestVC.h */,
-				0367C9131F78ED20006CA13B /* YBTestVC.m */,
-				0367C90F1F78E5C8006CA13B /* YBTestCell.h */,
-				0367C9101F78E5C8006CA13B /* YBTestCell.m */,
+				032455F31F7B580F00FBFAFA /* YBTestCell.h */,
+				032455F41F7B580F00FBFAFA /* YBTestCell.m */,
 				0367C8D81F78E4B9006CA13B /* Supporting Files */,
 			);
 			path = YBDataSourceDemo;
@@ -309,14 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0367C9111F78E5C8006CA13B /* YBTestCell.m in Sources */,
 				0367C91A1F78F5AB006CA13B /* YBTableViewController.m in Sources */,
-				0367C9141F78ED20006CA13B /* YBTestVC.m in Sources */,
 				0367C8E01F78E4B9006CA13B /* ViewController.m in Sources */,
 				0367C8DD1F78E4B9006CA13B /* AppDelegate.m in Sources */,
 				0367C91D1F790B02006CA13B /* YBListVC.m in Sources */,
 				0367C8DA1F78E4B9006CA13B /* main.m in Sources */,
 				0367C90E1F78E520006CA13B /* YBDataSource.m in Sources */,
+				032455F51F7B580F00FBFAFA /* YBTestCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +550,7 @@
 				0367C9041F78E4B9006CA13B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0367C9051F78E4B9006CA13B /* Build configuration list for PBXNativeTarget "YBDataSourceDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +559,7 @@
 				0367C9071F78E4B9006CA13B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0367C9081F78E4B9006CA13B /* Build configuration list for PBXNativeTarget "YBDataSourceDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +568,7 @@
 				0367C90A1F78E4B9006CA13B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
