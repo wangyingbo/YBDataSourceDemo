@@ -28,6 +28,8 @@
     self.tableViewDS.cellWillDisplayAtIndexPath = ^(UITableViewCell *cell, NSIndexPath *indexPath, id item) {
         cell.textLabel.text = @"name";
     };
+//    self.tableViewDS.cellForRowAtIndexPath = ^(id cell, NSIndexPath *indexPath, id item) {
+//    };
     self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
         return tableData.count;
     };
@@ -38,8 +40,14 @@
     
     
 #pragma mark - 方法二：使用自定义的tableViewCell
-//    [self initDatasourceWithCellClass:[YBTestCell class]];
-//    self.tableViewDS.cellWillDisplayAtIndexPath = ^(UITableViewCell *cell, NSIndexPath *indexPath, id item) {
+//    [self initDatasourceWithCellClass:[YBTestCell class] withCellIdentifier:@"cellId"];
+//    //    self.tableViewDS.cellWillDisplayAtIndexPath = ^(UITableViewCell *cell, NSIndexPath *indexPath, id item) {
+//    //        YBTestCell *myCell = (YBTestCell *)cell;
+//    //        myCell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    //        [myCell.iconImageView setImage:[UIImage imageNamed:@""]];
+//    //        myCell.contentLB.text = @"王颖博";
+//    //    };
+//    self.tableViewDS.cellForRowAtIndexPath = ^(id cell, NSIndexPath *indexPath, id item) {
 //        YBTestCell *myCell = (YBTestCell *)cell;
 //        myCell.selectionStyle = UITableViewCellSelectionStyleNone;
 //        [myCell.iconImageView setImage:[UIImage imageNamed:@""]];
@@ -48,10 +56,24 @@
 //    self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
 //        return tableData.count;
 //    };
+    
+    
+#pragma mark - 方法三：使用自定义的tableViewCell
+//    [self configDatasourceWithCellClass:[YBTestCell class] withCellIdentifier:@"ybcell"];
+//    self.tableViewDS.cellForRowAtIndexPath = ^(id cell, NSIndexPath *indexPath, id item) {
+//        YBTestCell *myCell = (YBTestCell *)cell;
+//        myCell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        [myCell.iconImageView setImage:[UIImage imageNamed:@""]];
+//        myCell.contentLB.text = @"王颖博";
+//    };
+//    self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
+//        return tableData.count;
+//    };
+//    [self configDatasource];
 }
 
 
-#pragma mark - 方法三：重写initDatasource方法
+#pragma mark - 方法四：重写initDatasource方法-完成自定义
 //- (void)initDatasource
 //{
 //    [self.tableView registerClass:[YBTestCell class] forCellReuseIdentifier:@"testCell"];
