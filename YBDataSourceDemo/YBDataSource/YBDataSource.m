@@ -39,7 +39,7 @@
 }
 
 - (instancetype)initWithTableData:(NSArray *)tableData
-           cellsForRowAtIndexPath:(UITableViewCell * (^)(NSIndexPath *indexPath, id item))cellsForRowAtIndexPath
+           cellsForRowAtIndexPath:(UITableViewCell * (^)(UITableView *tableView,NSIndexPath *indexPath, id item))cellsForRowAtIndexPath
 {
     self = [super init];
     
@@ -95,7 +95,7 @@
     
     if (self.cellsForRowAtIndexPath) {
        cellItem = [self itemAtIndexPath:indexPath sectionKey:self.sectionKey rowKey:nil];
-        cell = self.cellsForRowAtIndexPath(indexPath, cellItem);
+        cell = self.cellsForRowAtIndexPath(tableView, indexPath, cellItem);
         
         if (self.cellsForRowShowAtIndexPath) {
             self.cellsForRowShowAtIndexPath(cell, indexPath, cellItem);

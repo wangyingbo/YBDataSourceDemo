@@ -43,7 +43,7 @@
 //cellForRow, didSelect, height
 @property (nonatomic, copy) void (^cellForRowAtCustom)(id cell, NSIndexPath *indexPath);
 @property (nonatomic, copy) void (^cellForRowAtIndexPath)(id cell, NSIndexPath *indexPath, id item);
-@property (nonatomic, copy) UITableViewCell *(^cellsForRowAtIndexPath)(NSIndexPath *indexPath,id item);
+@property (nonatomic, copy) UITableViewCell *(^cellsForRowAtIndexPath)(UITableView *tableView, NSIndexPath *indexPath,id item);
 @property (nonatomic, copy) void (^cellsForRowShowAtIndexPath)(id cell ,NSIndexPath *indexPath,id item);
 @property (nonatomic, copy) void (^cellWillDisplayAtIndexPath)(id cell, NSIndexPath *indexPath, id item);
 @property (nonatomic, copy) void (^didSelectRowAtCustom)(NSIndexPath *indexPath);
@@ -57,7 +57,7 @@
             cellForRowAtIndexPath:(void (^)(id cell, NSIndexPath *indexPath, id item))cellForRowAtIndexPath;
 
 - (instancetype)initWithTableData:(NSArray *)tableData
-            cellsForRowAtIndexPath:(UITableViewCell * (^)(NSIndexPath *indexPath, id item))cellsForRowAtIndexPath;
+            cellsForRowAtIndexPath:(UITableViewCell * (^)(UITableView *tableView,NSIndexPath *indexPath, id item))cellsForRowAtIndexPath;
 
 
 
