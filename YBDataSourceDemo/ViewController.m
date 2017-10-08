@@ -34,7 +34,7 @@
     self.tableViewDS.numberOfSectionsInTableView = ^NSInteger(NSArray *tableData) {
         return tableData.count;
     };
-    self.tableViewDS.didSelectRowAtIndexPath = ^(NSIndexPath *indexPath, id item) {
+    self.tableViewDS.didSelectRowAtIndexPath = ^(UITableView *tableView, NSIndexPath *indexPath, id item) {
         YBListVC *listVC = [[YBListVC alloc]init];
         [weakSelf.navigationController pushViewController:listVC animated:YES];
     };

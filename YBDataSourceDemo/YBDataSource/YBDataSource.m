@@ -249,7 +249,7 @@
     }
     else if (self.didSelectRowAtIndexPath) {
         cellItem = [self itemAtIndexPath:indexPath sectionKey:self.sectionKey rowKey:self.rowKey];
-        self.didSelectRowAtIndexPath(indexPath, cellItem);
+        self.didSelectRowAtIndexPath(tableView,indexPath, cellItem);
     }
 }
 

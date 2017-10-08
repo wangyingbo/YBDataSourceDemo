@@ -47,7 +47,7 @@
 @property (nonatomic, copy) void (^cellsForRowShowAtIndexPath)(id cell ,NSIndexPath *indexPath,id item);
 @property (nonatomic, copy) void (^cellWillDisplayAtIndexPath)(id cell, NSIndexPath *indexPath, id item);
 @property (nonatomic, copy) void (^didSelectRowAtCustom)(NSIndexPath *indexPath);
-@property (nonatomic, copy) void (^didSelectRowAtIndexPath)(NSIndexPath *indexPath, id item);
+@property (nonatomic, copy) void (^didSelectRowAtIndexPath)(UITableView *tableView,NSIndexPath *indexPath, id item);
 @property (nonatomic, copy) void (^didDeselectRowAtIndexPath)(NSIndexPath *indexPath, id item);
 @property (nonatomic, copy) CGFloat (^heightForRowAtIndexPath)(NSIndexPath *indexPath, id item);
 
